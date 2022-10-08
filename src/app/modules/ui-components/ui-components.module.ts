@@ -7,6 +7,7 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { AnchorComponent } from './components/anchor/anchor.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 
@@ -16,7 +17,8 @@ import { IconButtonComponent } from './components/icon-button/icon-button.compon
     NavItemComponent,
     PanelComponent,
     AnchorComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,9 @@ import { IconButtonComponent } from './components/icon-button/icon-button.compon
   exports: [
     SidenavComponent,
     PanelComponent,
-    AnchorComponent
+    AnchorComponent,
+    ButtonComponent,
+    IconButtonComponent
   ]
 })
 export class UiComponentsModule { }
