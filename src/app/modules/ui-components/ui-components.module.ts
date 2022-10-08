@@ -5,6 +5,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RouterModule } from "@angular/router";
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { AnchorComponent } from './components/anchor/anchor.component';
+import { IconButtonComponent } from './components/icon-button/icon-button.component';
 
 
 
@@ -13,6 +14,7 @@ import { AnchorComponent } from './components/anchor/anchor.component';
     SidenavComponent,
     NavItemComponent
     AnchorComponent,
+    IconButtonComponent
   ],
   imports: [
     CommonModule,
