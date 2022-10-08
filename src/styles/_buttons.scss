@@ -1,0 +1,22 @@
+.btn-transparent {
+  --bs-btn-border-width: 1px;
+  --bs-btn-font-weight: var(--bs-btn-font-weight);
+
+  --bs-btn-color: var(--accent-900);
+  --bs-btn-bg: rgba(255, 255, 255, .05);
+  --bs-btn-border-color: rgba(255, 255, 255, .1);
+  --bs-btn-border-radius: var(--bs-btn-border-radius);
+
+  --bs-btn-hover-color: var(--accent-900);
+  --bs-btn-hover-bg: rgba(255, 255, 255, .05);
+  --bs-btn-hover-border-color: rgba(255, 255, 255, .1);
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+
+  --bs-btn-active-color: var(--accent-900);
+  --bs-btn-active-bg: rgba(255, 255, 255, .05);
+  --bs-btn-active-border-color: rgba(255, 255, 255, .1);
+
+  --bs-btn-disabled-color: var(--contrast-100);
+  --bs-btn-disabled-bg: rgba(255, 255, 255, .05);
+  --bs-btn-disabled-border-color: rgba(255, 255, 255, .1);
+}

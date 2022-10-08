@@ -4,3 +4,14 @@
 .container-md, .container-sm {
   --bs-gutter-x: 4.5rem;
 }
+
+.btn {
+  --bs-btn-border-width: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--contrast);
+  --bs-btn-bg: linear-gradient(149deg, var(--accent-900) 0%, var(--accent-400) 100%);
+
+  background: var(--bs-btn-bg);
+}
