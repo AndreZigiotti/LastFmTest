@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RouterModule } from "@angular/router";
 import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { AnchorComponent } from './components/anchor/anchor.component';
 
 
 
@@ -11,6 +12,7 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
   declarations: [
     SidenavComponent,
     NavItemComponent
+    AnchorComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
   ],
   exports: [
     SidenavComponent
+    AnchorComponent
   ]
 })
 export class UiComponentsModule { }

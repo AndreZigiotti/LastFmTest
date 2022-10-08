@@ -1,0 +1,12 @@
+:host {
+
+  &.default {
+    color: var(--contrast-100);
+    opacity: .7;
+
+    &:hover {
+      color: var(--contrast-100);
+      opacity: 1;
+    }
+  }
+}
