@@ -20,3 +20,25 @@
   --bs-btn-disabled-bg: rgba(255, 255, 255, .05);
   --bs-btn-disabled-border-color: rgba(255, 255, 255, .1);
 }
+
+.btn-primary {
+  --bs-btn-color: var(--contrast-100);
+  --bs-btn-bg: var(--accent-900);
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: var(--bs-btn-border-radius);
+
+  --bs-btn-hover-color: var(--contrast-100);
+  --bs-btn-hover-bg: var(--accent-700);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+
+  --bs-btn-active-color: var(--contrast-100);
+  --bs-btn-active-bg: var(--accent-900);
+  --bs-btn-active-border-color: transparent;
+
+  --bs-btn-disabled-color: var(--contrast-100);
+  --bs-btn-disabled-bg: var(--accent-900);
+  --bs-btn-disabled-border-color: transparent;
+
+  --bs-btn-bg: var(--accent-900);
+}
