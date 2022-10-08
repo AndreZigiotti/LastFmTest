@@ -1,8 +1,8 @@
 $palette: (
-  white: (
+  contrast: (
     100:    #fff
   ),
-  black: (
+  default: (
     900:    #000
   ),
   dark: (
@@ -14,6 +14,7 @@ $palette: (
     600:    #626670,
     700:    #4f535c,
     800:    #31353e,
+    850:    #181b25,
     900:    #11151d
   ),
   accent: (

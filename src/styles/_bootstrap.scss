@@ -1,1 +1,6 @@
-@import '~bootstrap/dist/css/bootstrap.css'
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg,
+.container-md, .container-sm {
+  --bs-gutter-x: 4.5rem;
+}

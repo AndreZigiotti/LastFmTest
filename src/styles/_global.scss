@@ -1,5 +1,10 @@
-html, body, app-root {
+html, body {
   display: flex;
   height: 100vh;
   flex-direction: column;
+}
+
+body {
+  color: var(--contrast-100);
+  background-color: var(--dark-900);
 }
