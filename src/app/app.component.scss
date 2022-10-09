@@ -4,5 +4,8 @@
 }
 
 main {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }

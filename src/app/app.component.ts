@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Menu } from "./shared/types/Menu";
 import { faCompactDisc, faGlobe, faMusic,  } from '@fortawesome/free-solid-svg-icons'
 
@@ -7,9 +7,8 @@ import { faCompactDisc, faGlobe, faMusic,  } from '@fortawesome/free-solid-svg-i
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'L5LastFm';
-
   menus: Menu[] = [
     {
       title: 'Menu',
@@ -32,4 +31,8 @@ export class AppComponent {
       ]
     }
   ]
+
+  constructor() {}
+
+  ngOnInit() {}
 }
