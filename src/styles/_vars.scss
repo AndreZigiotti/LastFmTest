@@ -37,3 +37,17 @@ $palette: (
     }
   }
 }
+
+$custom-offcanvas-width: 200px;
+$custom-grid-gutter-width: 4.5rem;
+
+$body-bg: map-get($palette, dark, 900);
+$body-color: map-get($palette, contrast, 100);
+
+$primary: map-get($palette, accent, 900);
+
+// Offcanvas
+$offcanvas-horizontal-width: $custom-offcanvas-width;
+
+// Container
+$grid-gutter-width: $custom-grid-gutter-width;

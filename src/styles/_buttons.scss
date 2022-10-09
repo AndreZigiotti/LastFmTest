@@ -1,44 +1,32 @@
 .btn-transparent {
-  --bs-btn-border-width: 1px;
-  --bs-btn-font-weight: var(--bs-btn-font-weight);
+  $bg: rgba(255, 255, 255, .05);
+  $border: rgba(255, 255, 255, .1);
+  $color: map-get($palette, accent, 900);
 
-  --bs-btn-color: var(--accent-900);
-  --bs-btn-bg: rgba(255, 255, 255, .05);
-  --bs-btn-border-color: rgba(255, 255, 255, .1);
-  --bs-btn-border-radius: var(--bs-btn-border-radius);
+  $hover-bg: $bg;
+  $hover-border: $border;
+  $hover-color: $color;
 
-  --bs-btn-hover-color: var(--accent-900);
-  --bs-btn-hover-bg: rgba(255, 255, 255, .05);
-  --bs-btn-hover-border-color: rgba(255, 255, 255, .1);
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  $active-bg: $bg;
+  $active-border: $border;
+  $active-color: $color;
 
-  --bs-btn-active-color: var(--accent-900);
-  --bs-btn-active-bg: rgba(255, 255, 255, .05);
-  --bs-btn-active-border-color: rgba(255, 255, 255, .1);
+  $disabled-bg: $bg;
+  $disabled-border: $border;
+  $disabled-color: map-get($palette, accent, 100);
 
-  --bs-btn-disabled-color: var(--contrast-100);
-  --bs-btn-disabled-bg: rgba(255, 255, 255, .05);
-  --bs-btn-disabled-border-color: rgba(255, 255, 255, .1);
-}
-
-.btn-primary {
-  --bs-btn-color: var(--contrast-100);
-  --bs-btn-bg: var(--accent-900);
-  --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: var(--bs-btn-border-radius);
-
-  --bs-btn-hover-color: var(--contrast-100);
-  --bs-btn-hover-bg: var(--accent-700);
-  --bs-btn-hover-border-color: transparent;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-
-  --bs-btn-active-color: var(--contrast-100);
-  --bs-btn-active-bg: var(--accent-900);
-  --bs-btn-active-border-color: transparent;
-
-  --bs-btn-disabled-color: var(--contrast-100);
-  --bs-btn-disabled-bg: var(--accent-900);
-  --bs-btn-disabled-border-color: transparent;
-
-  --bs-btn-bg: var(--accent-900);
+  @include button-variant(
+    $bg,
+    $border,
+    $color,
+    $hover-bg,
+    $hover-border,
+    $hover-color,
+    $active-bg,
+    $active-border,
+    $active-color,
+    $disabled-bg,
+    $disabled-border,
+    $disabled-color,
+  );
 }
