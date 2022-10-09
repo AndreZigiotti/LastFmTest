@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-3">
+      <h3>Results for: {{ term }}</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <app-panel title="Artists">
+        <div class="grid">
+          <app-artist-card
+            *ngFor="let artist of artists"
+            [name]="artist.name"
+            [listeners]="artist.listeners"
+          ></app-artist-card>
+        </div>
+      </app-panel>
+    </div>
+
+    <div class="col-4"></div>
+  </div>
+</div>
