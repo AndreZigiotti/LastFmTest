@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiComponentsModule } from "./modules/ui-components/ui-components.module";
 import { ApiService } from "./shared/services/api.service";
+import { LocalStorageService } from "./shared/services/local-storage.service";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,10 @@ import { ApiService } from "./shared/services/api.service";
     {
       provide: 'IApiService',
       useClass: ApiService
+    },
+    {
+      provide: 'ILocalStorageService',
+      useClass: LocalStorageService
     },
   ],
   bootstrap: [AppComponent]
