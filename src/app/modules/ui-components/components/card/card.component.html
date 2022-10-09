@@ -1,0 +1,16 @@
+<div class="meta-data d-flex">
+  <div *ngIf="!!listeners" class="data-wrapper">
+    <div class="data fw-bold">{{ toInteger(listeners) }}</div>
+    <div class="label"><small>Listeners</small></div>
+  </div>
+
+  <div *ngIf="!!playcount" class="data-wrapper">
+    <div class="data fw-bold">{{ toInteger(playcount) }}</div>
+    <div class="label"><small>Plays</small></div>
+  </div>
+</div>
+
+<div class="artist">
+  <img *ngIf="imageUrl" [src]="imageUrl" alt="">
+  <h6 class="artist-name fw-bold" *ngIf="name">{{ name }}</h6>
+</div>

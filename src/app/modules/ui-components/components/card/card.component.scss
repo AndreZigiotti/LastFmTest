@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  border: 1px solid var(--dark-900);
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.artist {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  img {
+    border-bottom-left-radius: 8px;
+  }
+
+  .artist-name {
+    margin-bottom: 0;
+    max-width: 180px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.meta-data {
+  border-bottom: 1px solid var(--dark-900);
+
+  .data-wrapper {
+    display: flex;
+    padding: 16px;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      border-left: 1px solid var(--dark-900);
+    }
+
+    .label {
+      opacity: .7;
+    }
+  }
+}
