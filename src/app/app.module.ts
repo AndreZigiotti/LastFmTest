@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UiComponentsModule } from "./modules/ui-components/ui-components.module";
 import { ApiService } from "./shared/services/api.service";
 import { LocalStorageService } from "./shared/services/local-storage.service";
+import { SearchHistoryService } from "./shared/services/search-history.service";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,10 @@ import { LocalStorageService } from "./shared/services/local-storage.service";
       provide: 'ILocalStorageService',
       useClass: LocalStorageService
     },
+    {
+      provide: 'ISearchHistoryService',
+      useClass: SearchHistoryService
+    }
   ],
   bootstrap: [AppComponent]
 })
