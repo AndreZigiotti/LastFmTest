@@ -9,6 +9,7 @@ import { AnchorComponent } from './components/anchor/anchor.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
 
@@ -22,6 +23,7 @@ import { CardComponent } from './components/card/card.component';
     ButtonComponent
     ButtonComponent,
     CardComponent,
+    SearchbarComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import { CardComponent } from './components/card/card.component';
     IconButtonComponent
     IconButtonComponent,
     CardComponent,
+    SearchbarComponent
   ]
 })
 export class UiComponentsModule { }
