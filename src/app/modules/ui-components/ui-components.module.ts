@@ -9,7 +9,9 @@ import { AnchorComponent } from './components/anchor/anchor.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
+import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 
@@ -20,14 +22,16 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     PanelComponent,
     AnchorComponent,
     IconButtonComponent,
-    ButtonComponent
     ButtonComponent,
     CardComponent,
+    HeaderComponent,
     SearchbarComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   exports: [
@@ -35,9 +39,9 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     PanelComponent,
     AnchorComponent,
     ButtonComponent,
-    IconButtonComponent
     IconButtonComponent,
     CardComponent,
+    HeaderComponent,
     SearchbarComponent
   ]
 })

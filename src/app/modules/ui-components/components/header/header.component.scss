@@ -1,0 +1,27 @@
+@import 'vars';
+@import 'mixins';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include media-breakpoint-up(lg) {
+    left: $custom-offcanvas-width;
+    width: calc(100% - $custom-offcanvas-width);
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    background-color: var(--dark-900);
+  }
+
+  .navbar-brand {
+    color: var(--contrast-100);
+  }
+}
