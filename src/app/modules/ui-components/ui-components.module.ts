@@ -16,6 +16,7 @@ import { ArtistCardComponent } from './components/artist-card/artist-card.compon
 import { ToLocaleNumberPipe } from './pipes/to-locale-number.pipe';
 import { PadStartPipe } from './pipes/pad-start.pipe';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 
@@ -33,7 +34,8 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     ArtistCardComponent,
     ToLocaleNumberPipe,
     PadStartPipe,
-    ListItemComponent
+    ListItemComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
@@ -52,7 +54,8 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     HeaderComponent,
     SearchbarComponent,
     ArtistCardComponent,
-    ListItemComponent
+    ListItemComponent,
+    BannerComponent
   ]
 })
 export class UiComponentsModule { }
