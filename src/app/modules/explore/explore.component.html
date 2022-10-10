@@ -1,5 +1,3 @@
-<app-banner></app-banner>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -12,6 +10,10 @@
             *ngFor="let artist of topArtists"
             [name]="artist.name"
             [listeners]="artist.listeners"
+            (click)="changeBanner({
+              title: artist.name,
+              listeners: artist.listeners
+            })"
           ></app-artist-card>
         </div>
       </app-panel>
@@ -32,6 +34,10 @@
             [artist]="track.artist.name"
             [listeners]="track.listeners"
             [showCover]="true"
+            (click)="changeBanner({
+              title: track.name,
+              name: track.artist.name
+            })"
           ></app-list-item>
         </div>
       </app-panel>

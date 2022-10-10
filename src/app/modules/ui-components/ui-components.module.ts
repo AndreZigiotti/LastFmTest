@@ -17,6 +17,7 @@ import { ToLocaleNumberPipe } from './pipes/to-locale-number.pipe';
 import { PadStartPipe } from './pipes/pad-start.pipe';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { BannerService } from "./services/banner.service";
 
 
 

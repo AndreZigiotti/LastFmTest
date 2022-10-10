@@ -2,5 +2,8 @@
 
 <main (scroll)="header.calcHeaderBgOpacity($event)">
   <app-header #header (searchTermChange)="onSearchTermChange($event)"></app-header>
+
+  <app-banner></app-banner>
+
   <router-outlet></router-outlet>
 </main>

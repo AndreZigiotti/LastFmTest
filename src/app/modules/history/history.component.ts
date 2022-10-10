@@ -1,6 +1,7 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from "rxjs";
 import { ISearchHistoryService } from "src/app/shared/interfaces/ISearchHistoryService";
+import { BannerService } from "../ui-components/services/banner.service";
 
 @Component({
   selector: 'app-history',
@@ -12,12 +13,23 @@ export class HistoryComponent implements OnInit, OnDestroy {
 
   private _unsubscribe$ = new Subject()
 
-  constructor(@Inject('ISearchHistoryService') private historyService: ISearchHistoryService) { }
+  constructor(
+    @Inject('ISearchHistoryService') private historyService: ISearchHistoryService,
+    private bannerService: BannerService
+  ) { }
 
   ngOnInit(): void {
     this.historyService.history$
       .pipe(takeUntil(this._unsubscribe$))
-      .subscribe(hist => this.history = hist)
+      .subscribe(hist => {
+        this.history = [...hist].reverse()
+      })
+
+    this.bannerService.setSettings({
+      color: '#8ecae6',
+      name: 'Avantasia',
+      title: 'a paranormal evening with the moonflower society'
+    })
   }
 
   ngOnDestroy(): void {

@@ -5,6 +5,7 @@ import { IApiService } from "src/app/shared/interfaces/IApiService";
 import { Album } from "src/app/shared/models/Album.model";
 import { Artist } from "src/app/shared/models/Artist.model";
 import { Track } from "src/app/shared/models/Track.model";
+import { BannerService, BannerSettings } from "../ui-components/services/banner.service";
 
 @Component({
   selector: 'app-search',
@@ -22,6 +23,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private bannerService: BannerService,
     @Inject('IApiService') private apiService: IApiService
   ) {}
 
@@ -37,6 +39,12 @@ export class SearchComponent implements OnInit, OnDestroy {
 
         this.refresh()
       })
+
+    this.bannerService.setSettings({
+      color: '#fb8500',
+      name: 'Dio',
+      title: 'Holy diver'
+    })
   }
 
   ngOnDestroy() {
@@ -56,6 +64,10 @@ export class SearchComponent implements OnInit, OnDestroy {
     this.apiService.searchByTrack(this.term, {})
       .pipe(takeUntil(this._unsubscribe$))
       .subscribe(res => this.tracks = res.results?.trackmatches?.track)
+  }
+
+  changeBanner(settings: BannerSettings) {
+    this.bannerService.setSettings(settings)
   }
 
 }

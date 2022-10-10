@@ -14,6 +14,10 @@
             *ngFor="let artist of artists"
             [name]="artist.name"
             [listeners]="artist.listeners"
+            (click)="changeBanner({
+              title: artist.name,
+              listeners: artist.listeners
+            })"
           ></app-artist-card>
         </div>
       </app-panel>
@@ -25,6 +29,10 @@
             [name]="album.artist"
             [title]="album.name"
             [isAlbum]="true"
+            (click)="changeBanner({
+              title: album.name,
+              name: album.artist
+            })"
           ></app-artist-card>
         </div>
       </app-panel>
@@ -40,6 +48,10 @@
             [artist]="track.artist"
             [listeners]="track.listeners"
             [showCover]="true"
+            (click)="changeBanner({
+              title: track.name,
+              name: track.artist
+            })"
           ></app-list-item>
         </div>
       </app-panel>

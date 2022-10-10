@@ -4,6 +4,7 @@ import { IApiService } from "src/app/shared/interfaces/IApiService";
 import { Artist } from "src/app/shared/models/Artist.model";
 import { Tag } from "src/app/shared/models/Tag.model";
 import { TrackAlt } from "src/app/shared/models/Track.model";
+import { BannerService, BannerSettings } from "../ui-components/services/banner.service";
 
 @Component({
   selector: 'app-explore',
@@ -19,10 +20,14 @@ export class ExploreComponent implements OnInit, OnDestroy {
 
   private _unsubscribe$ = new Subject()
 
-  constructor(@Inject('IApiService') private apiService: IApiService) {}
+  constructor(
+    @Inject('IApiService') private apiService: IApiService,
+    private bannerService: BannerService
+  ) {}
 
   ngOnInit(): void {
     this.refresh()
+    this.bannerService.reset()
   }
 
   ngOnDestroy() {
@@ -48,5 +53,9 @@ export class ExploreComponent implements OnInit, OnDestroy {
       .subscribe(res => {
         this.topTags = res.tags.tag
       })
+  }
+
+  changeBanner(settings: BannerSettings) {
+    this.bannerService.setSettings(settings)
   }
 }
