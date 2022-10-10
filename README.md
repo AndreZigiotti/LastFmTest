@@ -1,27 +1,42 @@
-# L5LastFm
+# :musical_note: Listener - Teste Last FM
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+## :page_with_curl: O Projeto
+Este projeto foi desenvolvido como um desafio de desenvolver uma aplicação consumindo a API da LastFM.
 
-## Development server
+Os requisitos necessários foram:
+- Apresentar tela de pesquisa de Artistas e Álbuns;
+- Utilizar localStorage para salvar o histórico de pesquisa;
+- Apresentar tela com o histórico de pesquisa;
+- Permitir a exclusão de itens do histórico de pesquisa;
+- Aplicação responsiva e utilização de bootstrap (opcional);
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## :gear: Tecnologias
+A aplicação foi desenvolvida com: 
+- Angular;
+- HTML5;
+- SASS;
+- TypeScript;
+- Bootstrap;
+- FontAwesome;
 
-## Code scaffolding
+# :desktop_computer: Executando a aplicação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :floppy_disk: Instalação
+Para fazer a instalação do projeto, basta:
+- Clonar este repositório ou baixar o zip e extrair no diretório de sua preferência;
+- Abrir o diretório do projeto no seu editor de código preferido. Recomendado o VS Code;
+- Abrir um terminal de comando na raíz do projeto;
+- Executar o comando `npm install`;
 
-## Build
+Agora todas as dependências serão instaladas. Agora basta seguir o processo de execução.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## :computer: Execução
+Para executar o projeto, após terminar a etapa de [Instalação](#instalação), basta abrir um terminal na raíz do projeto e executar um dos comandos abaixo:
 
-## Running unit tests
+### :hammer_and_wrench: Modo Desenvolvimento
+Execute o comando `npm start` Para iniciar o servidor de desenvolvimento. Após isso, no seu navegador, abra o endereço `http://localhost:4200/`. Agora você já deverá ver a aplicação sendo executada.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação recarregará automaticamente caso algum arquivo do projeto seja modificado.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### :package: Build
+Execute o comando `npm run build` para realizar o build da aplicação. Os arquivos serão salvos no diretório `dist/`.
