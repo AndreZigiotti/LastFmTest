@@ -12,6 +12,8 @@ import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ToLocaleNumberPipe } from './pipes/to-locale-number.pipe';
+import { PadStartPipe } from './pipes/pad-start.pipe';
 
 
 
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     CardComponent,
     HeaderComponent,
     SearchbarComponent
+    ToLocaleNumberPipe,
+    PadStartPipe,
   ],
   imports: [
     CommonModule,
