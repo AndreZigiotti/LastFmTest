@@ -1,19 +1,19 @@
 .btn-transparent {
   $bg: rgba(255, 255, 255, .05);
   $border: rgba(255, 255, 255, .1);
-  $color: map-get($palette, accent, 900);
+  $color: map-get($palette, contrast, 100);
 
   $hover-bg: $bg;
   $hover-border: $border;
-  $hover-color: $color;
+  $hover-color: map-get($palette, accent, 900);
 
   $active-bg: $bg;
   $active-border: $border;
-  $active-color: $color;
+  $active-color: map-get($palette, accent, 900);
 
   $disabled-bg: $bg;
   $disabled-border: $border;
-  $disabled-color: map-get($palette, accent, 100);
+  $disabled-color: map-get($palette, contrast, 100);
 
   @include button-variant(
     $bg,
