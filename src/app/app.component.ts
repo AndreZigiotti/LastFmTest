@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Menu } from "./shared/types/Menu";
-import { faCompactDisc, faGlobe, faMusic,  } from '@fortawesome/free-solid-svg-icons'
+import { faCompactDisc, faGlobe, faHistory, faMusic,  } from '@fortawesome/free-solid-svg-icons'
+import { Router } from "@angular/router";
+import { ISearchHistoryService } from "./shared/interfaces/ISearchHistoryService";
 
 @Component({
   selector: 'app-root',
@@ -16,23 +18,34 @@ export class AppComponent implements OnInit {
         {
           icon: faGlobe,
           label: 'Explore',
-          path: '/'
+          path: 'explore'
         },
         {
-          icon: faMusic,
-          label: 'Genres',
-          path: 'genres'
-        },
-        {
-          icon: faCompactDisc,
-          label: 'Albums',
-          path: 'albums'
+          icon: faHistory,
+          label: 'History',
+          path: 'history'
         }
       ]
     }
   ]
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    @Inject('ISearchHistoryService') private searchHistory: ISearchHistoryService
+  ) {}
 
   ngOnInit() {}
+
+  onSearchTermChange(term: string | null) {
+    if(!term) {
+      return
+    }
+
+    this.searchHistory.register(term)
+    this.router.navigate(['/search'], {
+      queryParams: {
+        term: term || ''
+      }
+    })
+  }
 }

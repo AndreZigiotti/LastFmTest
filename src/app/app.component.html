@@ -1,6 +1,6 @@
 <app-sidenav [menus]="menus"></app-sidenav>
 
 <main (scroll)="header.calcHeaderBgOpacity($event)">
-  <app-header #header></app-header>
+  <app-header #header (searchTermChange)="onSearchTermChange($event)"></app-header>
   <router-outlet></router-outlet>
 </main>

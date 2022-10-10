@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -7,6 +7,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() searchTermChange = new EventEmitter<string | null>()
+
   icon = faBars
   bgOpacity = 0
 
@@ -23,6 +25,6 @@ export class HeaderComponent implements OnInit {
   }
 
   onSearchChange(searchTerm: string | null) {
-    console.log(searchTerm)
+    this.searchTermChange.emit(searchTerm)
   }
 }
