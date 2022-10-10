@@ -4,6 +4,7 @@
   </span>
 
   <input
+    (keydown.enter)="emitValue()"
     [formControl]="searchFormControl"
     type="text"
     class="form-control"
