@@ -4,7 +4,7 @@
   <a app-anchor *ngIf="path; else navigationControls" [routerLink]="path">See All</a>
 
   <ng-template #navigationControls>
-    <div class="controls">
+    <div *ngIf="!!showNavigation" class="controls">
       <button
         app-icon-button
         size="sm"
