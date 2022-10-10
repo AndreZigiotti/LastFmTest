@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  padding: 8px 16px;
+  gap: 16px;
+  align-items: center;
+  transition: background-color ease-in-out .2s;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    background-color: var(--dark-900);
+  }
+}
+
+.indicator {
+  font-size: 1rem;
+}
+
+.cover {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--contrast-100);
+  background-color: var(--dark-900);
+  opacity: .6;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.data {
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.artist {
+  display: block;
+  opacity: .6;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.controls {
+  margin-left: auto;
+
+  .btn {
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+      color: var(--accent-500);
+    }
+  }
+}

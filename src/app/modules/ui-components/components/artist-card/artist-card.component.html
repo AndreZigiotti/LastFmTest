@@ -1,0 +1,16 @@
+<div class="avatar">
+  <fa-icon [icon]="isAlbum ? albumIcon : icon"></fa-icon>
+</div>
+
+<div class="wrapper">
+  <ng-template #artistName>
+    <h5 *ngIf="name" class="name fw-bold">{{ name }}</h5>
+    <span *ngIf="listeners">{{ listeners | toLocaleNumber }} listeners</span>
+  </ng-template>
+
+  <ng-container *ngIf="title; else artistName">
+    <h5 *ngIf="title" class="name fw-bold">{{ title }}</h5>
+    <span *ngIf="name">{{ name }} name</span>
+  </ng-container>
+
+</div>

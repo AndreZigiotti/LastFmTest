@@ -12,8 +12,10 @@ import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ArtistCardComponent } from './components/artist-card/artist-card.component';
 import { ToLocaleNumberPipe } from './pipes/to-locale-number.pipe';
 import { PadStartPipe } from './pipes/pad-start.pipe';
+import { ListItemComponent } from './components/list-item/list-item.component';
 
 
 
@@ -27,9 +29,11 @@ import { PadStartPipe } from './pipes/pad-start.pipe';
     ButtonComponent,
     CardComponent,
     HeaderComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    ArtistCardComponent,
     ToLocaleNumberPipe,
     PadStartPipe,
+    ListItemComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +50,9 @@ import { PadStartPipe } from './pipes/pad-start.pipe';
     IconButtonComponent,
     CardComponent,
     HeaderComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    ArtistCardComponent,
+    ListItemComponent
   ]
 })
 export class UiComponentsModule { }
