@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <app-panel
+        title="Top Artists"
+        [showNavigation]="false"
+      >
+        <div class="grid">
+          <app-artist-card
+            *ngFor="let artist of topArtists"
+            [name]="artist.name"
+            [listeners]="artist.listeners"
+            (click)="changeBanner({
+              title: artist.name,
+              listeners: artist.listeners
+            })"
+          ></app-artist-card>
+        </div>
+      </app-panel>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-6">
+      <app-panel
+        title="Top Tracks"
+        [showNavigation]="false"
+      >
+        <div class="tracks">
+          <app-list-item
+            *ngFor="let track of topTracks; let i = index"
+            [index]="i + 1"
+            [text]="track.name"
+            [artist]="track.artist.name"
+            [listeners]="track.listeners"
+            [showCover]="true"
+            (click)="changeBanner({
+              title: track.name,
+              name: track.artist.name
+            })"
+          ></app-list-item>
+        </div>
+      </app-panel>
+    </div>
+
+    <div class="col-6">
+      <app-panel title="Top Tags">
+        <span
+          *ngFor="let tag of topTags"
+          class="badge rounded-pill text-bg-primary mx-1"
+        >
+          {{ tag.name }}
+        </span>
+      </app-panel>
+    </div>
+  </div>
+</div>

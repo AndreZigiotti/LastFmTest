@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h1 class="banner-title fw-bold">{{ settings.title }}</h1>
+  <h4 *ngIf="settings.name; else listen" class="banner-artist fw-bold">{{ settings.name }}</h4>
+
+  <ng-template #listen>
+    <h4 class="banner-artist fw-bold">{{ settings.listeners | toLocaleNumber }} listeners</h4>
+  </ng-template>
+
+  <div class="controls d-flex">
+    <button app-button class="play-button">Play</button>
+    <button app-icon-button [icon]="icon"></button>
+  </div>
+</div>

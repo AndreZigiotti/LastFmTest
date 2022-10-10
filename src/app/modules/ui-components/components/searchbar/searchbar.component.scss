@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  flex: 1;
+}
+
+.input-group {
+  background-color: transparent;
+
+  &-text {
+    border-radius: 999px;
+    background-color: inherit;
+    border-color: rgba(255, 255, 255, .1);
+    border-right: 0;
+  }
+
+  .form-control {
+    border-radius: 999px;
+    background-color: inherit;
+    border-color: rgba(255, 255, 255, .1);
+    border-left: 0;
+    box-shadow: none;
+
+    &::placeholder {
+      color: var(--contrast-100);
+    }
+  }
+}

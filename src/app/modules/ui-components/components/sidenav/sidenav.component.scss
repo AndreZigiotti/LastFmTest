@@ -1,0 +1,36 @@
+@import 'vars';
+
+:host {
+  flex-shrink: 0;
+
+  --menu-padding-left: 32px;
+}
+
+.brand {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 52px;
+  max-height: 28px;
+  transform: translateX(-6px);
+}
+
+.menu-title {
+  margin-bottom: 24px;
+  padding-left: var(--menu-padding-left);
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+aside {
+  padding-top: 32px;
+  height: 100%;
+  width: $custom-offcanvas-width;
+  background-color: var(--dark-850)!important;
+  overflow: auto;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

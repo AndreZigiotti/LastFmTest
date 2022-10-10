@@ -1,0 +1,53 @@
+$palette: (
+  contrast: (
+    100:    #fff
+  ),
+  default: (
+    900:    #000
+  ),
+  dark: (
+    100:    #eaeffb,
+    200:    #dfe4f0,
+    300:    #ced3de,
+    400:    #a9aeb9,
+    500:    #898d98,
+    600:    #626670,
+    700:    #4f535c,
+    800:    #31353e,
+    850:    #181b25,
+    900:    #11151d
+  ),
+  accent: (
+    100:    #ffcdd9,
+    200:    #f599a4,
+    300:    #ef6f80,
+    400:    #fd4861,
+    500:    #ff2a49,
+    600:    #f61f48,
+    700:    #e30f40,
+    800:    #d60039,
+    900:    #c8002c
+  )
+);
+
+:root {
+  @each $context, $shades in $palette {
+    @each $shade, $color in $shades {
+      --#{$context}-#{$shade}: #{$color};
+    }
+  }
+}
+
+$custom-offcanvas-width: 200px;
+$custom-grid-gutter-width: 4.5rem;
+
+$body-bg: map-get($palette, dark, 900);
+$body-color: map-get($palette, contrast, 100);
+
+$primary: map-get($palette, accent, 900);
+
+// Offcanvas
+$offcanvas-horizontal-width: $custom-offcanvas-width;
+
+// Container
+$grid-gutter-width: $custom-grid-gutter-width;

@@ -1,0 +1,29 @@
+<div *ngIf="showPanelHeader" class="panel-header d-flex align-items-center justify-content-between">
+  <h5 *ngIf="title" class="fw-bold">{{ title }}</h5>
+
+  <a app-anchor *ngIf="path; else navigationControls" [routerLink]="path">See All</a>
+
+  <ng-template #navigationControls>
+    <div *ngIf="!!showNavigation" class="controls">
+      <button
+        app-icon-button
+        size="sm"
+        [icon]="prevIcon"
+        [rounded]="2"
+        (click)="onPrevClick()"
+      ></button>
+
+      <button
+        app-icon-button
+        size="sm"
+        [icon]="nextIcon"
+        [rounded]="2"
+        (click)="onNextClick()"
+      ></button>
+    </div>
+  </ng-template>
+</div>
+
+<div class="panel-body">
+  <ng-content></ng-content>
+</div>

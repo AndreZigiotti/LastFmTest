@@ -1,0 +1,18 @@
+<div *ngIf="index" class="indicator">
+  {{ index | padStart }}
+</div>
+
+<div *ngIf="showCover" class="cover">
+  <fa-icon [icon]="coverIcon"></fa-icon>
+</div>
+
+<div class="data">
+  <h6 *ngIf="text" class="title ellipsis">{{ text }}</h6>
+  <span *ngIf="artist" class="artist ellipsis">{{ artist }}</span>
+</div>
+
+<div *ngIf="showControls" class="controls">
+  <button class="btn btn-text btn-sm" (click)="onDeleteClick()">
+    <fa-icon [icon]="trashIcon"></fa-icon>
+  </button>
+</div>

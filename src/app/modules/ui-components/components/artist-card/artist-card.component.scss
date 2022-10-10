@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  min-width: 1px;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+  margin-bottom: -40px;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, .1);
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: var(--dark-850);
+}
+
+.wrapper {
+  padding: 16px;
+  padding-top: calc(40px + 8px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  width: 100%;
+  text-align: center;
+  background-color: var(--dark-900);
+
+  .name {
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  span {
+    display: block;
+    opacity: .6;
+    font-size: .8rem;
+  }
+}

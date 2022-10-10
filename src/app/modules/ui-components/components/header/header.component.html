@@ -1,0 +1,17 @@
+<header>
+  <div class="bg" [ngStyle]="{opacity: bgOpacity}"></div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid justify-content-start">
+      <button app-icon-button
+        class="btn btn-primary d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive"
+        aria-controls="offcanvasResponsive"
+        [icon]="icon"
+      ></button>
+
+      <app-searchbar (searchTextChanges)="onSearchChange($event)"></app-searchbar>
+    </div>
+  </nav>
+</header>
