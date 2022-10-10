@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { debounceTime, distinctUntilChanged, Subject, takeUntil } from "rxjs";
@@ -8,7 +8,7 @@ import { debounceTime, distinctUntilChanged, Subject, takeUntil } from "rxjs";
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchbarComponent implements OnInit, OnDestroy {
   @Output() searchTextChanges = new EventEmitter<string | null>()
 
   icon = faSearch
