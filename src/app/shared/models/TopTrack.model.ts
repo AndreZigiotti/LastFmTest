@@ -1,7 +1,7 @@
-import { Track } from "./Track.model"
+import { TrackAlt } from "./Track.model"
 
 export type TopTrack = {
   tracks: {
-    track: Track[]
+    track: TrackAlt[]
   }
 }

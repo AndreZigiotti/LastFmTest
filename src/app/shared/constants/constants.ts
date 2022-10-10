@@ -6,5 +6,11 @@ export const API_METHODS = {
   },
   ARTIST: {
     SEARCH: 'artist.search'
+  },
+  ALBUM: {
+    SEARCH: 'album.search'
+  },
+  TRACK: {
+    SEARCH: 'track.search'
   }
 }
