@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <app-panel title="History">
+    <ng-container *ngIf="history.length > 0; else empty">
+      <app-list-item
+        *ngFor="let item of history; let i = index"
+        [text]="item"
+        [index]="i + 1"
+        [showControls]="true"
+        (deleteClick)="onDelete(item)"
+      ></app-list-item>
+    </ng-container>
+
+    <ng-template #empty>
+      <p class="text-center">Ops. Your search history seems to be empty...</p>
+    </ng-template>
+  </app-panel>
+</div>
